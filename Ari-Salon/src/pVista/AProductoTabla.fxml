@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1215.0" style="-fx-background-color: EAF1F3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pControladorVistas.AProductoTablaController">
+   <children>
+      <TableView fx:id="tableProducto" layoutX="300.0" layoutY="250.0" prefHeight="400.0" prefWidth="745.0" snapToPixel="false" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="299.0" AnchorPane.topAnchor="224.0">
+        <columns>
+            <TableColumn fx:id="tcId_Producto" minWidth="30.000001311302185" prefWidth="30.000001311302185" resizable="false" text="ID" />
+          <TableColumn fx:id="tcNombreProducto" minWidth="99.20004117488861" prefWidth="160.66669273376465" resizable="false" text="Producto Nombre" />
+            <TableColumn fx:id="tcExistenciasProducto" minWidth="45.8665771484375" prefWidth="70.66664123535156" resizable="false" text="Cantidad" />
+            <TableColumn fx:id="tcCategoriaProducto" prefWidth="129.99993896484375" resizable="false" text="Categoria" />
+            <TableColumn fx:id="tcPrecioProducto" minWidth="0.0" prefWidth="54.0" resizable="false" text="Precio" />
+            <TableColumn fx:id="tcEstadoProducto" minWidth="0.0" prefWidth="114.66677856445312" resizable="false" text="Estado" />
+            <TableColumn fx:id="tcDescripcionProducto" minWidth="155.33343505859375" prefWidth="182.33333333333337" text="Descripción" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="244.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@../ZImagenes/IconoArI.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtBuscarProducto" layoutX="427.0" layoutY="102.0" prefHeight="37.0" prefWidth="465.0" promptText="Filtra Por Nombre de Cita y ID" style="-fx-background-radius: 10 0 0 10; -fx-border-color: white; -fx-border-radius: 10 0 0 10;" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="323.6666666666665" AnchorPane.topAnchor="102.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Pane layoutX="891.6666666666667" layoutY="102.0" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: #dadfe2; -fx-background-radius: 0 10 10 0;" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="102.0">
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <ComboBox fx:id="cbCategoriaFiltro" layoutX="509.0" layoutY="190.0" prefHeight="25.0" prefWidth="180.0" promptText="Categorias" style="-fx-background-color: D9CAFF;" AnchorPane.leftAnchor="509.0" AnchorPane.topAnchor="190.0" />
+      <Label layoutX="298.0" layoutY="180.0" prefHeight="44.0" prefWidth="210.0" text="Filtra Productos por:" AnchorPane.leftAnchor="298.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="40.0" layoutY="40.0" prefHeight="650.0" prefWidth="0.0" style="-fx-background-color: FFB4E1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnCerrarSesion" layoutY="610.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="157.0" style="-fx-background-color: F276E8;" text="Cerrar Sesion" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="22.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/ACerrarSesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEmpleados" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="163.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Empleados" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Empleados.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnVentas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="201.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Ventas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Ventas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="20.0" prefWidth="157.0" text="Menu Principal" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCitas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.0" layoutY="88.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Citas" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Citas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnServicios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.6666666666666665" layoutY="126.33333333333333" mnemonicParsing="false" prefHeight="37.0" prefWidth="161.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Servicios" AnchorPane.leftAnchor="-2.6666666666666665" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/cambio-de-imagen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.842170943040401E-14" layoutY="48.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: f3aacb; -fx-background-color: FFA0D9;" text="Productos" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="18.495" radius="9.963750000000001" spread="0.53" width="23.36">
+                     <color>
+                        <Color red="0.6052631735801697" green="0.6052631735801697" blue="0.6052631735801697" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Productos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../qImagenes/ALogo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="567.0" layoutY="39.0" prefHeight="44.0" prefWidth="210.0" text="Productos" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAñadirProducto" graphicTextGap="10.0" layoutX="987.0" layoutY="101.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: #2EF989;" text="Agregar Productos" AnchorPane.rightAnchor="38.66666666666667">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../qImagenes/Agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="7.18" surfaceScale="0.74">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminarProducto" graphicTextGap="15.0" layoutX="1052.0" layoutY="224.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: FF6C6C;" text="Eliminar" AnchorPane.rightAnchor="38.66666666666667">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../qImagenes/Borrar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="7.18" surfaceScale="0.74">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="btnEditarProducto" graphicTextGap="15.0" layoutX="1051.0" layoutY="279.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: FFD65B;" text="Editar" AnchorPane.rightAnchor="38.66666666666667">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="7.18" surfaceScale="0.74">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <graphic>
+            <ImageView fx:id="editarCita" fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../qImagenes/Editar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnVenderProductos" graphicTextGap="5.0" layoutX="1051.0" layoutY="335.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: #639CFF;" text="Actualizar" AnchorPane.rightAnchor="38.66666666666667">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="7.18" surfaceScale="0.74">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../qImagenes/Pago.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

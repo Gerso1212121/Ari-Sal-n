@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" style="-fx-background-color: FFB4E1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pControladorVistas.AInicioSesionController">
+   <children>
+      <AnchorPane prefHeight="673.0" prefWidth="1216.0">
+         <children>
+            <Pane layoutX="286.0" layoutY="106.0" prefHeight="473.0" prefWidth="700.0" style="-fx-background-radius: 10; -fx-background-color: #f5f5f5f5; -fx-border-color: black; -fx-border-radius: 10;" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="106.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="txtCorreo" layoutX="373.0" layoutY="211.0" prefHeight="30.0" prefWidth="231.0" promptText="Ingrese su correo" style="-fx-background-radius: 10 0 0 10;" />
+                  <Button fx:id="btnIniciar" defaultButton="true" layoutX="385.0" layoutY="361.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="206.0" style="-fx-background-color: E076F1; -fx-background-radius: 200;" text="Iniciar Sesión" textAlignment="CENTER" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView cache="true" fitHeight="25.0" fitWidth="18.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/qImagenes/AIniciar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="240.0" fitWidth="261.0" layoutX="55.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/qImagenes/ALogo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="405.0" layoutY="106.0" prefHeight="17.0" prefWidth="196.0" text="Iniciar Sesión">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="372.0" layoutY="175.0" prefHeight="25.0" prefWidth="144.0" text="Correo Electronico:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="372.0" layoutY="265.0" prefHeight="25.0" prefWidth="144.0" text="Contraseña:">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="351.0" style="-fx-background-color: E076F1; -fx-background-radius: 10 0 0 10; -fx-border-radius: 10 0 0 10; -fx-border-color: black; -fx-border-width: 1;" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Pane layoutX="604.0" layoutY="211.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #F0E6FA; -fx-background-radius: 0 10 10 0; -fx-border-color: #B0B0B0; -fx-border-radius: 0 10 10 0; -fx-border-width: 0.5;">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../qImagenes/AEmail.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <PasswordField fx:id="txtContra" layoutX="372.0" layoutY="303.0" prefHeight="30.0" prefWidth="231.0" promptText="Ingrese su contraseña" style="-fx-background-radius: 10 0 0 10;" />
+                  <Button fx:id="btnEmpleado" layoutX="350.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="350.0" style="-fx-background-radius: 0 10 10 0; -fx-background-color: #F5F5F5; -fx-border-radius: 0 10 10 0; -fx-border-color: black; -fx-border-width: 1;" text="Empleado">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane layoutX="603.0" layoutY="303.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #F0E6FA; -fx-background-radius: 0 10 10 0; -fx-border-color: #B0B0B0; -fx-border-radius: 0 10 10 0; -fx-border-width: 0.5;">
+                     <children>
+                        <ImageView fx:id="Mvercontra" fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../qImagenes/Contracandado.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <HBox alignment="TOP_RIGHT" layoutX="1.0" layoutY="-5.0" prefHeight="54.0" prefWidth="1215.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="btnSalir" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../qImagenes/Salir.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

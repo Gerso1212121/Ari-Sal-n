@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1215.0" style="-fx-background-color: EAF1F3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pControladorVistas.CitaAgendaController">
+   <children>
+      <AnchorPane layoutX="246.0" layoutY="196.0" prefHeight="371.0" prefWidth="810.0" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TextField fx:id="txtNombreCita" layoutX="189.0" layoutY="74.0" prefHeight="30.0" prefWidth="251.0" promptText="Nombre cita" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="74.0" />
+            <Pane layoutY="66.0" prefHeight="230.0" prefWidth="120.0" style="-fx-background-color: EAF1F3; -fx-background-radius: 0 50 50 0;">
+               <children>
+                  <ImageView fitHeight="230.0" fitWidth="257.0" layoutX="-63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Fecha.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="191.0" layoutY="42.0" text="Nombre" AnchorPane.leftAnchor="191.0" AnchorPane.topAnchor="42.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="547.0" layoutY="42.0" text="Fecha reserva" AnchorPane.rightAnchor="238.66666666666663" AnchorPane.topAnchor="42.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="547.0" layoutY="205.0" text="Empleado asignado" AnchorPane.rightAnchor="189.6666666666666">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="189.0" layoutY="116.0" text="Servicio" AnchorPane.leftAnchor="189.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbServicioCita" layoutX="189.0" layoutY="152.0" prefHeight="30.0" prefWidth="251.0" promptText="Seleccione un servicio" AnchorPane.leftAnchor="189.0" />
+            <DatePicker fx:id="dataReserva" layoutX="547.0" layoutY="74.0" prefHeight="30.0" prefWidth="257.0" promptText="Selecione su fecha de cita" showWeekNumbers="true" AnchorPane.rightAnchor="89.33333333333337" AnchorPane.topAnchor="74.0" />
+            <Button fx:id="btnAgregarCita" graphicTextGap="15.0" layoutX="181.0" layoutY="262.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="257.0" style="-fx-background-color: E076F1; -fx-background-radius: 50;" text="Agendar Cita" textFill="#3a3a3a" AnchorPane.leftAnchor="181.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fx:id="btnRegresarCita" fitHeight="45.0" fitWidth="36.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../qImagenes/ARegresar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ComboBox fx:id="cbEmpleadoAsignado" layoutX="547.0" layoutY="232.0" prefHeight="30.0" prefWidth="251.0" promptText="Seleccione un empleado" AnchorPane.rightAnchor="94.99999999999991" />
+            <TextField fx:id="txtHoraCita" layoutX="547.0" layoutY="152.0" prefHeight="30.0" prefWidth="257.0" promptText="24:00:00" AnchorPane.rightAnchor="89.33333333333337" />
+            <Label contentDisplay="CENTER" layoutX="548.0" layoutY="116.0" text="Hora Reserva" AnchorPane.rightAnchor="240.33333333333326">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="516.0" layoutY="105.0" text="Agenda de Cita" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="40.0" layoutY="40.0" prefHeight="650.0" prefWidth="0.0" style="-fx-background-color: FFB4E1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnCerrarSesion" layoutY="610.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="157.0" style="-fx-background-color: F276E8;" text="Cerrar Sesion" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="22.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/ACerrarSesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEmpleados" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="163.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Empleados" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Empleados.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnVentas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="201.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Ventas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Ventas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="20.0" prefWidth="157.0" text="Menu Principal" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnServicios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.6666666666666665" layoutY="126.33333333333333" mnemonicParsing="false" prefHeight="37.0" prefWidth="161.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Servicios" AnchorPane.leftAnchor="-2.6666666666666665" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/cambio-de-imagen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProductos" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-1.0" layoutY="50.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.6666" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Productos" AnchorPane.rightAnchor="0.3333333333333144">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Productos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCitas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="88.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.6666" style="-fx-background-radius: 0; -fx-border-color: f3aacb; -fx-background-color: FFA0D9;" text="Citas">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="18.495" radius="9.963750000000001" spread="0.53" width="23.36">
+                     <color>
+                        <Color red="0.6052631735801697" green="0.6052631735801697" blue="0.6052631735801697" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Citas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../qImagenes/ALogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

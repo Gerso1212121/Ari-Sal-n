@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1215.0" style="-fx-background-color: EAF1F3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pControladorVistas.EmpleadoAgendaController">       
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="244.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@../../../../../Imágenes/Nueva%20carpeta/IMG_20241031_103331.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="242.0" layoutY="236.0" prefHeight="352.0" prefWidth="844.0" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="236.0">
+         <children>
+            <TextField fx:id="txtNombreEmpleado" layoutX="149.0" layoutY="66.0" prefHeight="30.0" prefWidth="185.0" promptText="Ingrese un nombre" AnchorPane.leftAnchor="149.0" AnchorPane.topAnchor="66.0" />
+            <Pane layoutY="69.33333333333333" prefHeight="242.0" prefWidth="120.0" style="-fx-background-color: EAF1F3; -fx-background-radius: 0 50 50 0;" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="69.0">
+               <children>
+                  <ImageView fitHeight="192.0" fitWidth="157.0" layoutX="-52.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/emple.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="149.0" layoutY="34.0" text="Nombre" AnchorPane.leftAnchor="149.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="613.3333333333334" layoutY="121.0" text="Fecha de Contratación" AnchorPane.leftAnchor="613.3333333333334">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="121.0" text="Correo Electronico" AnchorPane.leftAnchor="149.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtApellidoEmpleado" layoutX="372.0" layoutY="66.0" prefHeight="30.0" prefWidth="193.0" promptText="Ingrese un apellido" AnchorPane.leftAnchor="372.0" />
+            <TextField fx:id="txtCorreoEmpleado" layoutX="152.0" layoutY="158.0" prefHeight="30.0" prefWidth="185.0" promptText="example@gmail.com" />
+            <DatePicker fx:id="dataContratacion" layoutX="616.0" layoutY="156.0" prefHeight="30.0" prefWidth="185.0" promptText="Seleccione una fecha" />
+            <Label layoutX="372.0" layoutY="34.0" text="Apellido">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="372.0" layoutY="121.0" text="Telefono">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelefonoEmpleado" layoutX="372.0" layoutY="160.0" prefHeight="26.0" prefWidth="193.0" promptText="70707070" AnchorPane.leftAnchor="372.0" />
+            <ImageView fx:id="btnRegresarEmpleado" fitHeight="70.0" fitWidth="66.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../ZImagenes/Salir.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField fx:id="txtEdadEmpleado" layoutX="615.0" layoutY="66.0" prefHeight="30.0" prefWidth="185.0" promptText="18 Años en adelante">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="615.0" layoutY="34.0" text="Edad:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAgregarEmpleado" layoutX="445.0" layoutY="231.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="252.0" style="-fx-background-color: E076F1; -fx-background-radius: 30;" text="Agregar Empleado" textFill="WHITE" AnchorPane.leftAnchor="445.0" AnchorPane.rightAnchor="146.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="149.0" layoutY="206.0" text="Rol">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtRolEmpleado" layoutX="149.0" layoutY="232.0" prefHeight="30.0" prefWidth="185.0" promptText="Ingrese un rol" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="420.0" layoutY="118.0" text="Registro Empleados" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="0.0" style="-fx-background-color: FFB4E1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnCerrarSesion" layoutY="610.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="157.0" style="-fx-background-color: F276E8;" text="Cerrar Sesion" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="22.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/ACerrarSesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnVentas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="201.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Ventas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Ventas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="20.0" prefWidth="157.0" text="Menu Principal" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCitas" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.6666666666666665" layoutY="88.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Citas" AnchorPane.rightAnchor="-0.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Citas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnServicios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-1.6666666666666665" layoutY="126.33333333333333" mnemonicParsing="false" prefHeight="37.0" prefWidth="161.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Servicios" AnchorPane.leftAnchor="-1.6666666666666665" AnchorPane.rightAnchor="-1.6666666666666572">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/cambio-de-imagen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEmpleados" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-1.0" layoutY="163.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: f3aacb; -fx-background-color: FFA0D9;" text="Empleados">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="18.495" radius="9.963750000000001" spread="0.53" width="23.36">
+                     <color>
+                        <Color red="0.6052631735801697" green="0.6052631735801697" blue="0.6052631735801697" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Empleados.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProductos" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-2.6666666666666665" layoutY="50.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-radius: 0; -fx-border-color: #fdeaf2; -fx-background-color: #fdeaf2;" text="Productos" AnchorPane.leftAnchor="-1.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../qImagenes/Productos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../qImagenes/ALogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
